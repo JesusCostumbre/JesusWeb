@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Diseño Web y Landing Pages para Negocios | JesusWeb</title>
+  
+  <meta name="description" content="Diseño y desarrollo de páginas web y landing pages directas para negocios. Trato 1 a 1 sin intermediarios técnicos. Tu web lista para captar clientes en 10-14 días.">
+  <meta name="author" content="JesusWeb">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://JesusWeb.web/">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Diseño Web Práctico para Negocios | JesusWeb.web">
+  <meta property="og:description" content="Páginas web y landing pages listas para captar clientes en 10-14 días. Trato directo 1 a 1 sin complicaciones técnicas.">
+  <meta property="og:url" content="https://JesusWeb.web/">
+  <meta property="og:image" content="https://JesusWeb.web/og-image.jpg">
+  <meta property="og:image:alt" content="JesusWeb.web - Soluciones de Diseño Web">
+
+  <!-- TWITTER CARDS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Diseño Web Práctico para Negocios | JesusWeb.web">
+  <meta name="twitter:description" content="Páginas web listas para vender en 10 a 14 días. Trato directo con el especialista.">
+  <meta name="twitter:image" content="https://JesusWeb.web/og-image.jpg">
+
+  <!-- DATOS ESTRUCTURADOS (Schema.org / JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "JesusWeb Web",
+    "image": "https://JesusWeb.web/og-image.jpg",
+    "description": "Especialista independiente en diseño de páginas web y landing pages de alta conversión para negocios.",
+    "url": "https://JesusWeb.web",
+    "priceRange": "$$",
+    "serviceType": [
+      "Landing Pages",
+      "Sitios Web Multi-sección",
+      "Rediseño y Mantenimiento Web"
+    ],
+    "areaServed": "Global",
+    "knowsAbout": ["Diseño Web", "Optimización Móvil", "Captación de Clientes"]
+  }
+  </script>
+
+  <!-- Tailwind CSS por CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tipografía Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-amber-400 selection:text-zinc-950">
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-zinc-950/85 backdrop-blur-md border-b border-zinc-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#" aria-label="Volver al inicio" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center font-bold text-zinc-950 text-lg shadow-lg shadow-amber-500/15" aria-hidden="true">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div>
+          <span class="font-extrabold text-lg text-white tracking-tight block leading-tight">JesusWeb<span class="text-amber-400">.web</span></span>
+          <span class="text-xs text-zinc-400 block font-medium">Estudio Web Independiente</span>
+        </div>
+      </a>
+
+      <!-- Menú Escritorio -->
+      <nav aria-label="Navegación principal" class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+        <a href="#ventajas" class="hover:text-amber-400 transition-colors">Ventajas 1 a 1</a>
+        <a href="#servicios" class="hover:text-amber-400 transition-colors">Servicios</a>
+        <a href="#proceso" class="hover:text-amber-400 transition-colors">Servicio Llave en Mano</a>
+        <a href="#faq" class="hover:text-amber-400 transition-colors">Preguntas</a>
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#contacto" class="bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-amber-400/20 transition-all transform active:scale-95 flex items-center gap-2">
+          <span>Hablemos de tu web</span>
+          <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Botón Menú Móvil -->
+      <button id="mobileMenuBtn" aria-label="Abrir menú de navegación" aria-expanded="false" class="md:hidden text-zinc-300 hover:text-white text-xl p-2 focus:outline-none">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobileMenu" class="hidden md:hidden bg-zinc-950/95 border-b border-zinc-800 px-6 py-4 space-y-4">
+      <a href="#ventajas" class="block text-zinc-300 hover:text-amber-400 font-medium mobile-link">Ventajas 1 a 1</a>
+      <a href="#servicios" class="block text-zinc-300 hover:text-amber-400 font-medium mobile-link">Servicios</a>
+      <a href="#proceso" class="block text-zinc-300 hover:text-amber-400 font-medium mobile-link">Servicio Llave en Mano</a>
+      <a href="#faq" class="block text-zinc-300 hover:text-amber-400 font-medium mobile-link">Preguntas</a>
+      <a href="#contacto" class="block text-center bg-amber-400 text-zinc-950 py-2.5 rounded-xl font-bold mobile-link">Escribir por WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <div class="absolute inset-0 -z-10 flex items-center justify-center opacity-30" aria-hidden="true">
+        <div class="w-[600px] h-[600px] bg-amber-500/20 rounded-full blur-[130px]"></div>
+        <div class="w-[450px] h-[450px] bg-amber-600/10 rounded-full blur-[100px] -translate-y-20"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse" aria-hidden="true"></span>
+          Disponible para nuevos proyectos este mes
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+          Diseño páginas web directas que <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">traen clientes</span>, sin complicaciones técnicas.
+        </h1>
+
+        <p class="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+          Trato 1 a 1 directo con el especialista. Sin intermediarios, sin presupuestos inflados de agencia y lista en 10 a 14 días.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contacto" class="w-full sm:w-auto bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold px-8 py-4 rounded-xl shadow-xl shadow-amber-400/20 transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i>
+            <span>Revisar mi proyecto por WhatsApp</span>
+          </a>
+          <a href="#servicios" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-zinc-700 bg-zinc-900/60 hover:bg-zinc-850 text-zinc-200 font-semibold transition-colors text-center">
+            Ver servicios disponibles
+          </a>
+        </div>
+
+        <!-- Métricas / Confianza -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-zinc-800 text-left">
+          <div class="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800">
+            <p class="text-2xl font-extrabold text-white">10-14</p>
+            <p class="text-xs text-zinc-400 mt-1">Días de entrega garantizada</p>
+          </div>
+          <div class="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800">
+            <p class="text-2xl font-extrabold text-amber-400">100%</p>
+            <p class="text-xs text-zinc-400 mt-1">Optimizado para smartphones</p>
+          </div>
+          <div class="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800">
+            <p class="text-2xl font-extrabold text-amber-400">1 a 1</p>
+            <p class="text-xs text-zinc-400 mt-1">Trato directo con tu diseñador</p>
+          </div>
+          <div class="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800">
+            <p class="text-2xl font-extrabold text-white">0%</p>
+            <p class="text-xs text-zinc-400 mt-1">Jerga técnica o enredos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTAJAS: AGENCIA VS. INDEPENDIENTE -->
+    <section id="ventajas" class="py-20 bg-zinc-900/30 border-y border-zinc-800/80">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Transparencia Total</h2>
+          <p class="text-3xl font-extrabold text-white tracking-tight">¿Por qué un especialista independiente en lugar de una agencia tradicional?</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Tarjeta Agencia Tradicional -->
+          <div class="p-8 rounded-2xl bg-zinc-900/60 border border-red-500/20 relative overflow-hidden">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-400 text-xs font-semibold mb-6">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i> La típica experiencia con agencias
+            </div>
+            <ul class="space-y-4 text-zinc-400 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-xmark text-red-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Múltiples intermediarios:</strong> Hablas con un comercial, que le pasa la orden a un gestor, que se la pasa a un becario.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-xmark text-red-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Tiempos eternos:</strong> Procesos burocráticos y semanas enteras para cambiar una simple frase o botón.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-xmark text-red-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Precios inflados:</strong> Pagas para cubrir oficinas costosas y comisiones comerciales.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-xmark text-red-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Jerga técnica:</strong> Explicaciones confusas para justificar sobrecostes innecesarios.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tarjeta Especialista Directo -->
+          <div class="p-8 rounded-2xl bg-zinc-900 border border-amber-400/40 relative shadow-2xl shadow-amber-400/5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-xs font-semibold mb-6">
+              <i class="fa-solid fa-check" aria-hidden="true"></i> Trabajando mano a mano conmigo
+            </div>
+            <ul class="space-y-4 text-zinc-200 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-amber-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Canal directo y ágil:</strong> Tienes mi contacto personal. Respondo tus dudas el mismo día sin rodeos.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-amber-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Entrega rápida en 10-14 días:</strong> Foco en lo esencial que hace vender a tu negocio desde el primer día.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-amber-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Precio justo y cerrado:</strong> Sin sorpresas ni costes ocultos. Sabes exactamente qué pagas y qué recibes.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-amber-400 mt-1" aria-hidden="true"></i>
+                <span><strong>Solución llave en mano:</strong> Me encargo del diseño visual, textos claros y puesta en marcha técnica.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS Y SOLUCIONES -->
+    <section id="servicios" class="py-24 relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        
+        <!-- Encabezado de la sección -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-rocket text-[11px]" aria-hidden="true"></i>
+            Planes Claros & Sin Sorpresas
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            Sistemas diseñados para que tu negocio consiga clientes
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base mt-3 leading-relaxed">
+            Desde la página de captación directa hasta el sistema integral con anuncios y soporte mes a mes.
+          </p>
+        </div>
+
+        <!-- Rejilla de Servicios (3 Columnas con la central destacada) -->
+        <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- PLAN 1: LANDING DE CAPTACIÓN -->
+          <article class="bg-zinc-900/60 rounded-2xl border border-zinc-800 hover:border-zinc-700 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+              </div>
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">Presencia Rápida</span>
+              <h3 class="text-xl font-extrabold text-white mb-2">Landing de Captación</h3>
+              <p class="text-xs text-zinc-400 mb-6 leading-relaxed">
+                Página de una sola pantalla directa al grano. Diseñada específicamente para validar una oferta o captar contactos desde tus redes sociales.
+              </p>
+
+              <!-- Insignia de Enfoque -->
+              <div class="mb-6 p-3 rounded-xl bg-zinc-950/60 border border-zinc-800 flex items-center gap-2 text-xs text-zinc-300">
+                <i class="fa-solid fa-bolt text-amber-400"></i>
+                <span>Inversión accesible • Arranque ágil</span>
+              </div>
+
+              <!-- Lista de características -->
+              <div class="space-y-3 text-xs text-zinc-300 border-t border-zinc-800/80 pt-4">
+                <div class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-amber-400 text-[11px]"></i>
+                  <span>Estructura vendedora de 1 pantalla</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-amber-400 text-[11px]"></i>
+                  <span>Botón directo a tu WhatsApp</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-amber-400 text-[11px]"></i>
+                  <span>Carga ultrarrápida (&lt; 1s en móviles)</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                  <i class="fa-solid fa-check text-amber-400 text-[11px]"></i>
+                  <span>Dominio y correo profesional listo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-zinc-800/80 mt-8 flex items-center justify-between">
+              <span class="text-xs text-zinc-500 font-medium">Entrega: 7-10 días</span>
+              <a href="#contacto" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 group">
+                Cotizar propuesta <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- PLAN 2: SISTEMA INTEGRAL (DESTACADO / SOLUCIÓN ESTRELLA) -->
+          <article class="bg-gradient-to-b from-zinc-900 via-zinc-900 to-zinc-950 rounded-2xl border-2 border-amber-400 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-2xl shadow-amber-400/10 relative lg:-translate-y-2">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 text-[10px] font-extrabold uppercase px-4 py-1 rounded-full shadow-lg tracking-wider flex items-center gap-1.5 whitespace-nowrap">
+              <i class="fa-solid fa-crown text-[10px]" aria-hidden="true"></i>
+              Solución Completa Recomendada
+            </div>
+
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-400 text-zinc-950 flex items-center justify-center text-xl mb-6 shadow-md shadow-amber-400/20">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+              </div>
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">Web + Tráfico Activo</span>
+              <h3 class="text-2xl font-extrabold text-white mb-2">Sistema Integral</h3>
+              <p class="text-xs text-zinc-300 mb-6 leading-relaxed">
+                No solo construimos una web corporativa de autoridad; le conectamos el flujo de personas interesadas mediante Google Maps y anuncios en tu ciudad.
+              </p>
+
+              <!-- Insignia de Enfoque -->
+              <div class="mb-6 p-3 rounded-xl bg-zinc-950/80 border border-amber-400/30 flex items-center gap-2 text-xs text-amber-300">
+                <i class="fa-solid fa-gem text-amber-400"></i>
+                <span>Proyecto llave en mano • Retorno de inversión</span>
+              </div>
+
+              <!-- Lista de características -->
+              <div class="space-y-3 text-xs text-zinc-200 border-t border-zinc-800/80 pt-4">
+                <div class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-amber-400 text-[13px] mt-0.5"></i>
+                  <span><strong>Web Multi-sección completa:</strong> Arquitectura de confianza, catálogo de servicios y cotizador interactivo por pasos.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-amber-400 text-[13px] mt-0.5"></i>
+                  <span><strong>Ficha de Google Maps optimizada:</strong> Para captar a quienes buscan tu servicio directamente en tu ciudad.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-amber-400 text-[13px] mt-0.5"></i>
+                  <span><strong>Campaña Meta Ads lista:</strong> Anuncios segmentados localmente con Pixel configurado directo a tu WhatsApp.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <i class="fa-solid fa-circle-check text-amber-400 text-[13px] mt-0.5"></i>
+                  <span><strong>1er mes de soporte y pauta incluido:</strong> Calibramos tus anuncios y ajustamos textos sin costo adicional.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-zinc-800/80 mt-8">
+              <div class="flex items-center justify-between mb-3 text-xs">
+                <span class="text-zinc-400 font-medium">Entrega: 10-14 días</span>
+                <span class="text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Instalación Llave en Mano</span>
+              </div>
+              <a href="#contacto" class="w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold py-3.5 px-4 rounded-xl transition-all shadow-lg shadow-amber-400/20 text-xs sm:text-sm flex items-center justify-center gap-2">
+                <span>Solicitar propuesta del Sistema</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- PLAN 3: MANTENIMIENTO & GESTIÓN CONTINUA -->
+          <article class="bg-zinc-900/60 rounded-2xl border border-zinc-800 hover:border-zinc-700 p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center text-xl mb-6">
+                <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+              </div>
+              <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block mb-1">Continuidad & Crecimiento</span>
+              <h3 class="text-xl font-extrabold text-white mb-2">Mantenimiento & Ads</h3>
+              <p class="text-xs text-zinc-400 mb-6 leading-relaxed">
+                Delegación técnica total para mantener tu sitio al día y asegurar que tus campañas de captación no dejen de rendir.
+              </p>
+
+              <!-- Selector de modalidades disponibles -->
+              <div class="space-y-2 mb-6">
+                <div class="p-3 rounded-xl bg-zinc-950/70 border border-zinc-800/90 text-left">
+                  <div class="flex items-center justify-between text-xs font-bold text-white mb-1">
+                    <span>1. Soporte Web Base</span>
+                    <span class="text-[10px] text-zinc-400 bg-zinc-800 px-2 py-0.5 rounded">3 cambios/mes</span>
+                  </div>
+                  <p class="text-[11px] text-zinc-400 leading-normal">
+                    Textos, fotos, promociones en &lt; 24h y monitoreo de velocidad.
+                  </p>
+                </div>
+
+                <div class="p-3 rounded-xl bg-zinc-950/70 border border-amber-400/30 text-left">
+                  <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+                    <span>2. Web + Gestión de Ads</span>
+                    <span class="text-[10px] text-amber-400/90 bg-amber-400/10 px-2 py-0.5 rounded">Escalabilidad</span>
+                  </div>
+                  <p class="text-[11px] text-zinc-400 leading-normal">
+                    Soporte web completo + supervisión semanal de campañas (Meta/Google) y reporte de prospectos a WhatsApp.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Ventajas operativas -->
+              <div class="space-y-2 text-xs text-zinc-300 border-t border-zinc-800/80 pt-4">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-amber-400 text-[11px]"></i>
+                  <span>Sin contratos forzosos (renovación mes a mes)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-check text-amber-400 text-[11px]"></i>
+                  <span>Atención prioritaria directa por WhatsApp</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 border-t border-zinc-800/80 mt-6 flex items-center justify-between">
+              <span class="text-xs text-zinc-500 font-medium">Ajustes sueltos: Por tarea</span>
+              <a href="#contacto" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 group">
+                Elegir modalidad <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Mención inferior de orientación -->
+        <div class="mt-12 p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800 text-center max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-left">
+            <p class="text-sm font-bold text-white">¿No tienes claro cuál es el punto de partida ideal para tu negocio?</p>
+            <p class="text-xs text-zinc-400">Cuéntame en 2 minutos a qué te dedicas y te doy una recomendación honesta sin compromiso.</p>
+          </div>
+          <a href="#contacto" class="shrink-0 text-xs font-bold bg-zinc-800 hover:bg-zinc-700 text-zinc-200 px-4 py-2.5 rounded-xl border border-zinc-700 transition-colors">
+            Pedir orientación
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OFERTA PRINCIPAL LLAVE EN MANO (CON PRIMER MES DE SOPORTE) -->
+    <section id="proceso" class="py-20 bg-zinc-900/40 border-t border-zinc-800/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Garantía de Entrega</h2>
+          <p class="text-3xl font-extrabold text-white tracking-tight">El Método "Llave en Mano"</p>
+          <p class="text-zinc-400 text-sm mt-3">Todo lo necesario para que tu negocio tenga presencia digital sólida sin tocar una sola línea de código.</p>
+        </div>
+
+        <div class="bg-gradient-to-b from-zinc-900 to-zinc-950 border-2 border-amber-400/40 rounded-3xl p-8 sm:p-10 shadow-2xl relative">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-2">Despreocúpate de lo técnico</h3>
+              <p class="text-zinc-300 text-sm mb-6 leading-relaxed">
+                Ideal para negocios y profesionales que quieren captar clientes directamente desde sus redes, anuncios o recomendaciones sin perder tiempo en gestiones técnicas.
+              </p>
+
+              <ul class="space-y-3 text-sm text-zinc-200">
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-amber-400" aria-hidden="true"></i>
+                  <span>Estructura vendedora y redacción clara de tus servicios.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-amber-400" aria-hidden="true"></i>
+                  <span>Diseño 100% responsivo optimizado para smartphones.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-amber-400" aria-hidden="true"></i>
+                  <span>Botón directo a WhatsApp o canal de contacto preferido.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-amber-400" aria-hidden="true"></i>
+                  <span>Dominio, correo profesional y hosting configurados.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-check text-amber-400" aria-hidden="true"></i>
+                  <span><strong>Primer mes de soporte y ajustes incluido:</strong> Para que no te preocupes por nada tras el lanzamiento.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center">
+              <p class="text-xs uppercase font-bold text-zinc-400 tracking-wider">Tiempo de entrega</p>
+              <p class="text-3xl font-extrabold text-white mt-1 mb-4">10 a 14 días</p>
+              
+              <p class="text-xs text-zinc-400 mb-6">Precio cerrado y adaptado al alcance exacto de tu negocio tras una breve charla de 15 minutos.</p>
+              
+              <a href="#contacto" class="block w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-amber-400/20 text-sm">
+                Pedir propuesta por WhatsApp
+              </a>
+              
+              <p class="text-[11px] text-zinc-400 mt-3 flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-shield-halved text-amber-400" aria-hidden="true"></i> Sin compromiso ni llamadas pesadas
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULADORA / SIMULADOR INTERACTIVO -->
+    <section class="py-16 bg-zinc-950 border-t border-zinc-800/80">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 sm:p-8">
+          <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-calculator text-amber-400" aria-hidden="true"></i>
+            <span>¿Qué tipo de solución necesita tu negocio?</span>
+          </h3>
+          <p class="text-xs text-zinc-400 mb-6">Selecciona tu situación y obtén una recomendación preliminar instantánea.</p>
+
+          <div class="space-y-4">
+            <div>
+              <label for="bizType" class="block text-xs font-semibold text-zinc-300 mb-1">¿Cuál es tu tipo de actividad?</label>
+              <select id="bizType" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+                <option value="profesional">Servicios Profesionales (Abogado, Consultor, Seguros)</option>
+                <option value="salud">Salud o Clínica (Médicos, Dentistas, Fisioterapia)</option>
+                <option value="local">Comercio o Servicio Local (Reformas, Talleres, Instaladores)</option>
+                <option value="otro">Otro tipo de negocio</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="bizGoal" class="block text-xs font-semibold text-zinc-300 mb-1">¿Qué problema quieres resolver primero?</label>
+              <select id="bizGoal" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+                <option value="no-web">No tengo web y quiero empezar a tener presencia profesional</option>
+                <option value="no-convierte">Tengo web pero no me genera llamadas ni contactos</option>
+                <option value="lenta">Mi web actual es vieja, lenta y no se ve bien en móviles</option>
+              </select>
+            </div>
+
+            <div id="simResult" aria-live="polite" class="p-4 rounded-xl bg-amber-950/30 border border-amber-400/25 text-xs sm:text-sm text-zinc-200 mt-4">
+              <!-- Actualizado por JavaScript -->
+            </div>
+
+            <button id="sendSimWhatsApp" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors">
+              <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
+              <span>Enviar esta consulta directa a mi WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQS) -->
+    <section id="faq" class="py-20 max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2">Dudas habituales</h2>
+        <p class="text-3xl font-extrabold text-white tracking-tight">Preguntas frecuentes</p>
+      </div>
+
+      <div class="space-y-3">
+        <!-- FAQ 1 (CON PLAN DE MANTENIMIENTO) -->
+        <div class="faq-item border border-zinc-800 rounded-2xl bg-zinc-900/60 overflow-hidden">
+          <button class="faq-btn w-full p-5 text-left font-semibold text-sm sm:text-base text-white flex justify-between items-center focus:outline-none" aria-expanded="false" aria-controls="faq-ans-1">
+            <span>¿Qué pasa si después necesito cambiar textos, precios o imágenes?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-zinc-400 transition-transform duration-300" aria-hidden="true"></i>
+          </button>
+          <div id="faq-ans-1" class="faq-answer px-5 pb-5 text-xs sm:text-sm text-zinc-300 leading-relaxed hidden">
+            No tienes que aprender a usar plataformas complejas ni tocar código. Cuentas con un plan de mantenimiento mensual donde simplemente me mandas los cambios por WhatsApp y yo los aplico por ti en menos de 24 horas, asegurando que la web nunca se desconfigure ni pierda velocidad.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item border border-zinc-800 rounded-2xl bg-zinc-900/60 overflow-hidden">
+          <button class="faq-btn w-full p-5 text-left font-semibold text-sm sm:text-base text-white flex justify-between items-center focus:outline-none" aria-expanded="false" aria-controls="faq-ans-2">
+            <span>¿Por qué tardas solo 10 a 14 días?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-zinc-400 transition-transform duration-300" aria-hidden="true"></i>
+          </button>
+          <div id="faq-ans-2" class="faq-answer px-5 pb-5 text-xs sm:text-sm text-zinc-300 leading-relaxed hidden">
+            Porque trabajo con un número limitado de clientes a la vez y me enfoco en lo que produce resultados (claridad comercial, rapidez de carga y llamadas a la acción), eliminando reuniones burocráticas e intermediarios.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item border border-zinc-800 rounded-2xl bg-zinc-900/60 overflow-hidden">
+          <button class="faq-btn w-full p-5 text-left font-semibold text-sm sm:text-base text-white flex justify-between items-center focus:outline-none" aria-controls="faq-ans-3" aria-expanded="false">
+            <span>¿Qué pasa si no tengo fotos profesionales ni textos redactados?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-zinc-400 transition-transform duration-300" aria-hidden="true"></i>
+          </button>
+          <div id="faq-ans-3" class="faq-answer px-5 pb-5 text-xs sm:text-sm text-zinc-300 leading-relaxed hidden">
+            No te preocupes. Con una entrevista redacto los contenidos de forma persuasiva. Para la parte visual, utilizo recursos gráficos limpios y fotografías de catálogo de alta resolución acordes a tu sector.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO / CIERRE -->
+    <section id="contacto" class="py-20 bg-zinc-950 border-t border-zinc-800/80">
+      <div class="max-w-xl mx-auto px-4 sm:px-6 text-center">
+        <div class="w-16 h-16 rounded-2xl bg-amber-400/10 border border-amber-400/25 text-amber-400 flex items-center justify-center mx-auto mb-6 text-2xl" aria-hidden="true">
+          <i class="fa-regular fa-comment-dots"></i>
+        </div>
+        
+        <h2 class="text-3xl font-extrabold text-white tracking-tight mb-3">Hablemos de tu negocio hoy mismo</h2>
+        <p class="text-zinc-400 text-sm mb-8">Cuéntame brevemente qué necesitas y te responderé con una orientación honesta en menos de 24 horas.</p>
+
+        <form id="contactForm" class="space-y-4 text-left">
+          <div>
+            <label for="formName" class="block text-xs font-medium text-zinc-300 mb-1">Tu nombre o el de tu negocio <span class="text-amber-400">*</span></label>
+            <input type="text" id="formName" required placeholder="Ej. Carlos Martínez / Clínica Dental Norte" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+
+          <div>
+            <label for="formWeb" class="block text-xs font-medium text-zinc-300 mb-1">Tu página web actual (opcional)</label>
+            <input type="text" id="formWeb" placeholder="Ej. minegocio.com (deja en blanco si empiezas desde cero)" class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+
+          <div>
+            <label for="formMessage" class="block text-xs font-medium text-zinc-300 mb-1">¿Qué problema quieres que solucionemos? <span class="text-amber-400">*</span></label>
+            <textarea id="formMessage" rows="3" required placeholder="Ej. Necesito una web multi-sección con cotizador para mi consultora de seguros." class="w-full bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold py-3.5 rounded-xl text-sm shadow-xl shadow-amber-400/20 transition-all flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
+            <span>Enviar mensaje por WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="py-8 bg-zinc-950 border-t border-zinc-850 text-center text-xs text-zinc-400">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 JesusWeb.web — Especialista en diseño web práctico y directo.</p>
+      <div class="flex items-center gap-5 text-zinc-400">
+        <a href="https://facebook.com/tu-pagina" target="_blank" rel="noopener noreferrer" aria-label="Visitar página de Facebook" class="hover:text-amber-400 transition-colors">
+          <i class="fa-brands fa-facebook text-base" aria-hidden="true"></i>
+        </a>
+      <div class="flex items-center gap-4 text-zinc-400">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn" class="hover:text-amber-400 transition-colors">
+          <i class="fa-brands fa-linkedin text-base" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de Instagram" class="hover:text-amber-400 transition-colors">
+          <i class="fa-brands fa-instagram text-base" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a id="floatingWhatsApp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversación en WhatsApp" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-400 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl shadow-emerald-500/30 transition-transform hover:scale-110 active:scale-95">
+    <i class="fa-brands fa-whatsapp text-2xl" aria-hidden="true"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
