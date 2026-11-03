@@ -1,0 +1,55 @@
+/* clinica.css - Ajustes visuales e interacciones para OdontoPro */
+
+/* Fuente base */
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Transiciones fluidas en tarjetas y botones de interacción */
+.calc-btn,
+.slot-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover suave en tarjetas del cotizador cuando no están activas */
+.calc-btn:not(.active):hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1; /* slate-300 */
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* Estado activo del cotizador (sincronizado con Tailwind) */
+.calc-btn.active {
+  border-color: #2563eb !important; /* blue-600 */
+  background-color: #ffffff !important;
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.15);
+}
+
+/* Estado activo en slots de horario */
+.slot-btn.active {
+  border-color: #2563eb !important;
+  background-color: rgba(239, 246, 255, 0.7) !important; /* blue-50 */
+  color: #1e3a8a !important; /* blue-900 */
+}
+
+.slot-btn.active span {
+  color: #1d4ed8 !important; /* blue-700 */
+}
+
+/* Enfoque accesible en inputs y formularios */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Opciones limpias dentro de menús desplegables nativos */
+select option {
+  background-color: #ffffff;
+  color: #0f172a; /* slate-900 */
+  padding: 8px;
+}

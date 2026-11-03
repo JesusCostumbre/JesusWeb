@@ -1,0 +1,71 @@
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body.bloqueado { overflow: hidden; }
+:focus-visible { outline: 3px solid #2c5a4d; outline-offset: 3px; }
+
+.skip { position: absolute; left: -999px; top: 8px; background: #2c5a4d; color: #f5f6f2; padding: 8px 14px; border-radius: 8px; z-index: 100; font-weight: 700; }
+.skip:focus { left: 8px; }
+
+.nav-blur { background: rgba(245, 246, 242, 0.85); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+
+.card { background: #e4ebe5; border: 1px solid rgba(29, 42, 38, 0.1); border-radius: 16px; padding: 20px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; padding: 13px 22px; border-radius: 12px; border: 2px solid transparent; cursor: pointer; transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease; }
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: #2c5a4d; color: #f5f6f2; }
+.btn-primary:hover { background: #1d2a26; }
+.btn-ghost { border-color: rgba(29, 42, 38, 0.35); color: #1d2a26; }
+.btn-ghost:hover { border-color: #2c5a4d; color: #2c5a4d; }
+
+.btn-cart { position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 12px; border: 2px solid #9a621d; font-weight: 700; cursor: pointer; transition: background-color 0.2s ease; }
+.btn-cart:hover { background: rgba(154, 98, 29, 0.18); }
+.contador { min-width: 24px; height: 24px; display: inline-grid; place-items: center; background: #2c5a4d; color: #f5f6f2; border-radius: 999px; font-size: 0.8rem; padding: 0 6px; }
+.contador.bump { animation: bump 0.35s ease; }
+@keyframes bump { 40% { transform: scale(1.35); } }
+
+.combo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding: 28px; border-radius: 20px; border: 1px solid rgba(44, 90, 77, 0.45); background: linear-gradient(135deg, #e4ebe5 60%, rgba(154, 98, 29, 0.22)); }
+
+.tab { padding: 10px 20px; border-radius: 999px; border: 2px solid rgba(29, 42, 38, 0.25); font-weight: 700; cursor: pointer; transition: background-color 0.2s ease, color 0.2s ease; }
+.tab:hover { border-color: #2c5a4d; }
+.tab[aria-selected="true"] { background: #2c5a4d; border-color: #2c5a4d; color: #f5f6f2; }
+
+.producto { display: flex; flex-direction: column; gap: 6px; }
+.producto .fila { display: flex; align-items: baseline; gap: 8px; }
+.producto .puntos { flex: 1; border-bottom: 2px dotted rgba(29, 42, 38, 0.25); transform: translateY(-4px); }
+.etiqueta { align-self: flex-start; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: rgba(44, 90, 77, 0.16); color: #2c5a4d; }
+.btn-add { align-self: flex-start; margin-top: 6px; padding: 7px 16px; border-radius: 10px; border: 2px solid #9a621d; color: #2c5a4d; font-weight: 700; cursor: pointer; transition: background-color 0.2s ease, color 0.2s ease; }
+.btn-add:hover { background: #9a621d; color: #f5f6f2; }
+
+.overlay { position: fixed; inset: 0; background: rgba(29, 42, 38, 0.5); z-index: 50; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(420px, 100%); background: #e4ebe5; border-left: 1px solid rgba(29, 42, 38, 0.12); padding: 20px; z-index: 60; display: flex; flex-direction: column; animation: entrar 0.25s ease; }
+.drawer[hidden], .overlay[hidden] { display: none; }
+@keyframes entrar { from { transform: translateX(40px); opacity: 0; } }
+
+.icon-btn { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; border: 1px solid rgba(29, 42, 38, 0.25); cursor: pointer; }
+.campo { display: block; width: 100%; margin-top: 4px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(29, 42, 38, 0.3); background: #f5f6f2; color: #1d2a26; }
+.campo::placeholder { color: rgba(29, 42, 38, 0.65); }
+
+.linea { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.cant { display: inline-flex; align-items: center; gap: 8px; }
+.cant button { width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid #1d2a26; cursor: pointer; font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+:root { color-scheme: light; }
+#panel { min-height: 22rem; }
+#menu, #como-pedir, #espacio, #ubicacion { content-visibility: auto; contain-intrinsic-size: auto 640px; }
+
+/* Header y pie en verde bosque, sólidos */
+header.nav-blur { background: #2c5a4d; -webkit-backdrop-filter: none; backdrop-filter: none; color: #f5f6f2; border-bottom: 1px solid rgba(245, 246, 242, 0.18); box-shadow: 0 2px 14px rgba(29, 42, 38, 0.22); }
+header.nav-blur .text-forest { color: #e3b073; }
+header.nav-blur nav a:hover { color: #e3b073; }
+header.nav-blur .btn-cart { border-color: #f5f6f2; color: #f5f6f2; }
+header.nav-blur .btn-cart:hover { background: rgba(245, 246, 242, 0.14); }
+header.nav-blur .contador { background: #f5f6f2; color: #2c5a4d; }
+header.nav-blur :focus-visible { outline-color: #f5f6f2; }
+body > footer.border-t { background: #2c5a4d; color: rgba(245, 246, 242, 0.88); border-color: transparent; }
+
+/* Garantiza que los elementos con "hidden" se oculten aunque tengan clases de Tailwind */
+[hidden] { display: none !important; }

@@ -1,57 +1,39 @@
-/* ==========================================================================
-   CONFIGURACIÓN PALETA ÁMBAR BOUTIQUE
-   ========================================================================== */
+/* styles.css - Reglas visuales y micro-interacciones de JesusWeb */
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* Transiciones universales en elementos interactivos */
-a, button {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+/* Transiciones para inputs y selects */
+input, select, textarea {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-/* Foco accesible con el tono ámbar */
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 2px solid #fbbf24;
-  outline-offset: 2px;
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.25);
 }
 
-/* Estado activo para los filtros del portafolio (Ámbar + Texto oscuro) */
-.filter-btn.active {
-  background-color: #fbbf24 !important;
-  color: #09090b !important;
+select option {
+  background-color: #18181b; /* zinc-900 */
+  color: #f4f4f5;           /* zinc-100 */
 }
 
-/* Animación de apertura para el acordeón de FAQs */
-.faq-answer:not(.hidden) {
+/* Rotación suave del icono en acordeón de FAQs */
+.faq-btn i {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-btn i {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
   display: block;
-  animation: faqFadeDown 0.25s ease-out forwards;
 }
 
-@keyframes faqFadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Respeto por preferencias de reducción de movimiento */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/* Animaciones sutiles para tarjetas de demos y servicios */
+article {
+  will-change: transform;
 }
